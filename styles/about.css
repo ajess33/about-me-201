@@ -57,7 +57,7 @@ header li:hover {
   width: 300px;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0 0 15px #333;
+  box-shadow: 0 0 20px #333;
   background-color: #fbfbfb;
   display: inline-block;
 }
@@ -69,10 +69,6 @@ header li:hover {
 .footer {
   height: 20vh;
   background-color: #333;
-  /* position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px; */
   text-align: center;
 }
 

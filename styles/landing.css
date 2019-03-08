@@ -1,0 +1,24 @@
+main {
+  width: 400px;
+  height: 400px;
+  /* margin: 0 auto; */
+  text-align: center;
+  border: 1px solid #333;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+}
+
+main p {
+  margin: 150px 0 20px 0;
+  font-size: 1.3em;
+}
+
+main a {
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  margin-top: 20px;
+}
