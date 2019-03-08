@@ -14,6 +14,16 @@ header {
   margin: 0 auto;
 }
 
+.title {
+  width: 550px;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.icon:hover {
+  transform: none;
+}
+
 h1 {
   font-size: 3.8em;
   font-weight: 800;
@@ -65,7 +75,6 @@ main {
 
 .shows,
 .movies {
-  /* margin: 40px auto; */
   margin: 40px 20px;
   width: 550px;
   padding: 30px;
@@ -73,14 +82,9 @@ main {
   box-shadow: 0 0 20px #333;
   background-color: #fbfbfb;
   display: inline-block;
-  clear: both;
   text-align: center;
   height: 250px;
 }
-
-/* .movies {
-  float: right;
-} */
 
 section ol,
 section ul {
@@ -116,8 +120,14 @@ footer {
   height: 20vh;
   background-color: #333;
   text-align: center;
+  padding-top: 30px;
 }
 
 footer p {
-  color: #999999;
+  color: #fff;
+}
+
+iframe {
+  margin: 0 auto;
+  display: block;
 }
