@@ -94,8 +94,8 @@ section ul {
   text-align: left;
 }
 
-.shows div,
-.movies div {
+.shows section,
+.movies section {
   display: inline-block;
 }
 
