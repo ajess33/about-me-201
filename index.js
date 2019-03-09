@@ -1,4 +1,10 @@
 const name = prompt('What is your name?');
-const intro = document.querySelector('.hello');
+let elIntro = document.querySelector('.hello');
 console.log(name);
-console.log(intro);
+
+if (name === '') {
+  // if the user does not enter a name
+  elIntro.textContent = `Thanks for Visiting, Stranger!`;
+} else {
+  elIntro.textContent = `Thanks for Visiting, ${name}!`;
+}
