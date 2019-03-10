@@ -66,6 +66,7 @@ header li:hover {
 
 main {
   margin: 0 auto;
+  text-align: center;
 }
 
 .about {
@@ -97,10 +98,6 @@ section ul {
 .shows section,
 .movies section {
   display: inline-block;
-}
-
-li a {
-  cursor: pointer;
 }
 
 section img {
