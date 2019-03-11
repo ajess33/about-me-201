@@ -17,9 +17,15 @@ main {
   box-shadow: 5px 5px 20px #333;
 }
 
-main .hello {
+main .hello,
+main p {
   font-size: 1.3em;
   margin: 40px 0 50px 0;
+}
+
+main .hello {
+  text-transform: uppercase;
+  color: #fff;
 }
 
 main a {

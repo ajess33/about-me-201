@@ -4,7 +4,7 @@ console.log(name);
 
 if (name === '') {
   // if the user does not enter a name
-  elIntro.textContent = `Thanks for Visiting, Stranger!`;
+  elIntro.textContent = ` Stranger!`;
 } else {
-  elIntro.textContent = `Thanks for Visiting, ${name}!`;
+  elIntro.textContent = ` ${name}!`;
 }
