@@ -17,3 +17,11 @@ alert(
 );
 
 confirm('Was the information displayed correctly?');
+
+var elUsername = document.getElementById('username');
+var elExperience = document.getElementById('user-experience');
+var elSkill = document.getElementById('user-skill');
+
+elUsername.textContent = userName;
+elExperience.textContent = userExperience;
+elSkill.textContent = userSkill;
