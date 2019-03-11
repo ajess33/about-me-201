@@ -8,10 +8,10 @@ function guessingGame() {
   var guess = parseFloat(prompt('Guess a number'));
 
   while (guess !== number) {
-    prompt('Your guess is wrong. Try again!!');
+    guess = parseFloat(prompt('Your guess is wrong. Try again!!'));
   }
-
-  if (guess === name) {
+  // only works if you are right on your first guess
+  if (guess === number) {
     alert(`Congrats ${guess} was the number!!`);
   }
 }
