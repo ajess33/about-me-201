@@ -16,6 +16,10 @@ function guessingGame() {
   }
 }
 
+// ======================
+// LAB 06
+// ======================
+
 // use a total of 4 prompts and confirms
 // each response should be in a variable
 
@@ -24,7 +28,7 @@ var userExperience = prompt('How long have you been learning to code?');
 var userJob = prompt('What kind of job do you want as a programmer?');
 
 alert(
-  `Hello, ${userName}! You have been learning to code for ${userExperience} to be a  ${userJob}`
+  `Hello, ${userName}! You have been learning to code for ${userExperience} to be a ${userJob}`
 );
 
 confirm('Correct?');
