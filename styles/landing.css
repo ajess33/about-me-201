@@ -37,6 +37,11 @@ main a {
   border-radius: 5px;
 }
 
+main a:hover {
+  background: #fff;
+  color: #333;
+}
+
 .enter-button {
   position: relative;
   animation-name: slidein;
