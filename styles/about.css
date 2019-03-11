@@ -83,8 +83,12 @@ main {
   box-shadow: 0 0 20px #333;
   background-color: #fbfbfb;
   display: inline-block;
-  text-align: center;
+  /* text-align: center; */
   height: 250px;
+}
+
+section h2 {
+  text-align: left;
 }
 
 section ol,
@@ -109,6 +113,11 @@ section img:hover {
   transform: scale(1.4);
 }
 
+iframe {
+  margin: 0 auto;
+  display: block;
+}
+
 /* =================== */
 /* FOOTER */
 /* =================== */
@@ -122,9 +131,4 @@ footer {
 
 footer p {
   color: #fff;
-}
-
-iframe {
-  margin: 0 auto;
-  display: block;
 }
