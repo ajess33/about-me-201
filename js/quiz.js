@@ -1,17 +1,6 @@
-// Must start by asking their name
-// Ask them 5 questions about myself (yes or no)
-// Use .tolowercase or .touppercase to allow for caps
-// After each question notify the user whether they got the question correct or now
-// Use console messages
-
-// USER STORIES
-// display questions and answers on quiz.html
-// show questions on quiz.html before the prompts
-
 'use strict';
 
 var quizScore = 0;
-
 var userName = prompt('Who is taking the quiz today?');
 confirm(`Welcome, ${userName}`);
 
