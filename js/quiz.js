@@ -12,44 +12,90 @@ confirm(`Welcome, ${userName}`);
 // answers should be stored in an array
 // show the score at the end
 
-// yes no questions and answers should be in an array
-
 var questions = [
   'Am I 27 years old?',
   'Did I go to the University of Iowa?',
   'Do I have a degree in accounting?',
   'Is my favorite show The Office?',
   'Will I be working for FabPro after DeltaV?',
-  'What is my favorite number?',
-  'What town do I live in? Cedar Rapids, Iowa City, North Liberty, Des Moines'
+  'What is my favorite number? (1-10)',
+  'Name a state other than Iowa that I have visited'
 ];
 
-var answers = ['no', 'yes', 'no', 'no', 'yes', 3, 'North Liberty'];
+var answers = [
+  'no',
+  'yes',
+  'no',
+  'no',
+  'yes',
+  3,
+  [
+    'illinois',
+    'wisconsin',
+    'missouri',
+    'florida',
+    'tennessee',
+    'texas',
+    'colorado'
+  ]
+];
 
+// YES NO QUESTIONS
 for (var i = 0; i < questions.length - 2; i++) {
   var guess = prompt(questions[i]);
   guess.toLowerCase();
-  if (guess === answers[i]) {
-    // if correct
-    console.log(`${guess} is CORRECT!`);
-    quizScore++;
-  } else {
-    // incorrect answer
+  if (guess !== answers[i]) {
+    // if incorrect
     console.log(`${guess} is INCORRECT!`);
+  } else {
+    // correct answer
+    quizScore++;
+    console.log(`${guess} is CORRECT!`);
   }
 }
 
-for (var j = 0; i < 4; j++) {
-  var guess2 = parseFloat(prompt(questions[5]));
+// NUMBER QUESTION
+var guess2 = parseFloat(prompt(questions[5]));
+while (guess2 !== answers[5]) {
   // if incorrect
-  if (guess2 !== answers[5]) {
-    guess2 = parseFloat(prompt(questions[5]));
+  if (guess2 > answers[5]) {
+    guess2 = parseFloat(prompt('TOO HIGH! ' + questions[5]));
+    console.log(`${guess} is INCORRECT. TOO HIGH`);
     // if correct
+  } else if (guess2 < answers[5]) {
+    guess2 = parseFloat(prompt('TOO LOW! ' + questions[5]));
+    console.log(`${guess} is INCORRECT. TOO HIGH`);
   } else {
     quizScore++;
+    console.log(`${guess} is CORRECT`);
     break;
   }
 }
+
+// for (var j = 0; j < 4; j++) {
+
+// }
+
+// var elAge = document.getElementById('age');
+// var elSchool = document.getElementById('school');
+// var elDegree = document.getElementById('degree');
+// var elShow = document.getElementById('show');
+// var elJob = document.getElementById('job');
+// var elScore = document.getElementById('specific-score');
+// var elMessage = document.getElementById('message');
+
+// elAge.textContent = questionAge.toUpperCase();
+// elSchool.textContent = questionSchool.toUpperCase();
+// elDegree.textContent = questionDegree.toUpperCase();
+// elShow.textContent = questionFavoriteShow.toUpperCase();
+// elJob.textContent = questionJob.toUpperCase();
+// elScore.textContent = quizScore;
+
+// if (quizScore >= 3) {
+//   elMessage.textContent = 'Good job!!!';
+// } else {
+//   elMessage.textContent = 'Better luck next time!!!';
+// }
 
 // setTimeout(() => {
 //   var questionAge = prompt('Am I 27 years old');
@@ -127,24 +173,4 @@ for (var j = 0; i < 4; j++) {
 //     alert('Please answer yes or no');
 //   }
 
-//   var elAge = document.getElementById('age');
-//   var elSchool = document.getElementById('school');
-//   var elDegree = document.getElementById('degree');
-//   var elShow = document.getElementById('show');
-//   var elJob = document.getElementById('job');
-//   var elScore = document.getElementById('specific-score');
-//   var elMessage = document.getElementById('message');
-
-//   elAge.textContent = questionAge.toUpperCase();
-//   elSchool.textContent = questionSchool.toUpperCase();
-//   elDegree.textContent = questionDegree.toUpperCase();
-//   elShow.textContent = questionFavoriteShow.toUpperCase();
-//   elJob.textContent = questionJob.toUpperCase();
-//   elScore.textContent = quizScore;
-
-//   if (quizScore >= 3) {
-//     elMessage.textContent = 'Good job!!!';
-//   } else {
-//     elMessage.textContent = 'Better luck next time!!!';
-//   }
 // }, 3000);
