@@ -30,17 +30,20 @@ var answers = [
   'yes',
   3,
   [
-    'illinois',
-    'wisconsin',
-    'missouri',
-    'florida',
-    'tennessee',
-    'texas',
-    'colorado'
+    'Illinois',
+    'Wisconsin',
+    'Missouri',
+    'Florida',
+    'Tennessee',
+    'Texas',
+    'Colorado'
   ]
 ];
 
-// YES NO QUESTIONS
+// setTimeout(() => {
+
+// }, 3000);
+// YES, NO QUESTIONS
 for (var i = 0; i < questions.length - 2; i++) {
   var guess = prompt(questions[i]);
   guess.toLowerCase();
@@ -65,31 +68,57 @@ while (guess2 !== answers[5]) {
   } else if (guess2 < answers[5]) {
     guess2 = parseFloat(prompt('TOO LOW! ' + questions[5]));
     console.log(`${guess} is INCORRECT. TOO HIGH`);
-  } else {
-    quizScore++;
-    console.log(`${guess} is CORRECT`);
-    break;
   }
 }
 
-// for (var j = 0; j < 4; j++) {
+if (guess2 === answers[5]) {
+  quizScore++;
+  console.log(`${guess2} was correct!`);
+}
 
-// }
+// } else {
+//   quizScore++;
+//   console.log(`${guess} is CORRECT`);
+//   break;
 
-// var elAge = document.getElementById('age');
-// var elSchool = document.getElementById('school');
-// var elDegree = document.getElementById('degree');
-// var elShow = document.getElementById('show');
-// var elJob = document.getElementById('job');
-// var elScore = document.getElementById('specific-score');
-// var elMessage = document.getElementById('message');
+// MULTIPLE ANSWERS
+for (var j = 0; j < 4; j++) {
+  console.log(quizScore);
+  var guess3 = prompt(questions[6]);
+  guess3.toLowerCase();
+  for (var k = 0; k < answers[6].length; k++) {
+    if (guess3 === answers[6][k]) {
+      quizScore++;
+      console.log(`${guess3} is one of the states I've been to!`);
+      alert('Correct!');
+    }
+  }
+}
 
-// elAge.textContent = questionAge.toUpperCase();
-// elSchool.textContent = questionSchool.toUpperCase();
-// elDegree.textContent = questionDegree.toUpperCase();
-// elShow.textContent = questionFavoriteShow.toUpperCase();
-// elJob.textContent = questionJob.toUpperCase();
-// elScore.textContent = quizScore;
+var elAge = document.getElementById('age');
+var elSchool = document.getElementById('school');
+var elDegree = document.getElementById('degree');
+var elShow = document.getElementById('show');
+var elJob = document.getElementById('job');
+var elNumber = document.getElementById('number');
+var elStates = document.getElementById('states');
+var elScore = document.getElementById('specific-score');
+var elMessage = document.getElementById('message');
+
+elAge.textContent = answers[0].toUpperCase();
+elSchool.textContent = answers[1].toUpperCase();
+elDegree.textContent = answers[2].toUpperCase();
+elShow.textContent = answers[3].toUpperCase();
+elJob.textContent = answers[4].toUpperCase();
+elNumber.textContent = answers[5];
+elStates.textContent = answers[6];
+elScore.textContent = quizScore;
+
+if (quizScore > 3) {
+  elMessage.textContent = 'Good job!!!';
+} else {
+  elMessage.textContent = 'Better luck next time!!!';
+}
 
 // if (quizScore >= 3) {
 //   elMessage.textContent = 'Good job!!!';
