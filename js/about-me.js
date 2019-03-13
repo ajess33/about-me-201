@@ -1,3 +1,4 @@
+// Random number game
 const playButton = document.getElementById('start-game');
 playButton.addEventListener('click', guessingGame);
 
