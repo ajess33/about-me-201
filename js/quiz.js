@@ -1,5 +1,15 @@
 'use strict';
 
+var elAge = document.getElementById('age');
+var elSchool = document.getElementById('school');
+var elDegree = document.getElementById('degree');
+var elShow = document.getElementById('show');
+var elJob = document.getElementById('job');
+var elNumber = document.getElementById('number');
+var elStates = document.getElementById('states');
+var elScore = document.getElementById('specific-score');
+var elMessage = document.getElementById('message');
+
 var quizScore = 0;
 
 var questions = [
@@ -63,7 +73,7 @@ function numberGuess() {
   }
   quizScore++;
   console.log(`${guess2} was correct!`);
-} 
+}
 
 // MULTIPLE ANSWERS
 function statesQuestion() {
@@ -95,18 +105,6 @@ function askAllQuestions() {
   elStates.textContent = answers[6];
   elScore.textContent = quizScore;
 }
-
-var elAge = document.getElementById('age');
-var elSchool = document.getElementById('school');
-var elDegree = document.getElementById('degree');
-var elShow = document.getElementById('show');
-var elJob = document.getElementById('job');
-var elNumber = document.getElementById('number');
-var elStates = document.getElementById('states');
-var elScore = document.getElementById('specific-score');
-var elMessage = document.getElementById('message');
-
-
 
 if (quizScore > 3) {
   elMessage.textContent = 'Good job!!!';
