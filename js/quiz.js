@@ -2,14 +2,6 @@
 
 var quizScore = 0;
 
-// 5 yes or no questions
-// 6th question ask favorite number
-// alert too high or too low
-// at most 4 chances to guess
-// 7th question should be a multiple choice
-// answers should be stored in an array
-// show the score at the end
-
 var questions = [
   'Am I 27 years old?',
   'Did I go to the University of Iowa?',
@@ -51,7 +43,6 @@ setTimeout(() => {
     } else {
       // correct answer
       quizScore++;
-      console.log(quizScore);
       console.log(`${guess} is CORRECT!`);
     }
   }
@@ -70,15 +61,12 @@ setTimeout(() => {
     }
   }
   quizScore++;
-  console.log(quizScore);
   console.log(`${guess2} was correct!`);
 
   // MULTIPLE ANSWERS
   for (var j = 0; j < 4; j++) {
-    console.log(quizScore);
     var guess3 = prompt(questions[6]);
     guess3.toLowerCase();
-    console.log(answers[6]);
     for (var k = 0; k < answers[6].length; k++) {
       if (guess3 === answers[6][k]) {
         quizScore++;
