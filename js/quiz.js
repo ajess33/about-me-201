@@ -28,13 +28,13 @@ var answers = [
   'yes',
   3,
   [
-    'Illinois',
-    'Wisconsin',
-    'Missouri',
-    'Florida',
-    'Tennessee',
-    'Texas',
-    'Colorado'
+    'illinois',
+    'wisconsin',
+    'missouri',
+    'florida',
+    'tennessee',
+    'texas',
+    'colorado'
   ]
 ];
 
@@ -65,21 +65,20 @@ setTimeout(() => {
     } else if (guess2 < answers[5]) {
       guess2 = parseFloat(prompt('TOO LOW! ' + questions[5]));
       console.log(`${guess} is INCORRECT. TOO HIGH`);
+    } else {
+      break;
     }
   }
-
-  // if (guess2 === answers[5]) {
   quizScore++;
   console.log(quizScore);
   console.log(`${guess2} was correct!`);
-  // }
 
   // MULTIPLE ANSWERS
   for (var j = 0; j < 4; j++) {
     console.log(quizScore);
     var guess3 = prompt(questions[6]);
     guess3.toLowerCase();
-    // var isCorrect = false;
+    console.log(answers[6]);
     for (var k = 0; k < answers[6].length; k++) {
       if (guess3 === answers[6][k]) {
         quizScore++;
