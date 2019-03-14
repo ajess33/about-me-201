@@ -33,6 +33,7 @@ var answers = [
 setTimeout(() => {
   var userName = prompt('Who is taking the quiz today?');
   confirm(`Welcome, ${userName}`);
+
   // YES, NO QUESTIONS
   for (var i = 0; i < questions.length - 2; i++) {
     var guess = prompt(questions[i]);
