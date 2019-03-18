@@ -90,12 +90,7 @@ function statesQuestion() {
   }
 }
 
-function askAllQuestions() {
-  var userName = prompt('Who is taking the quiz today?');
-  confirm(`Welcome, ${userName}`);
-  yesNo();
-  numberGuess();
-  statesQuestion();
+function reportQuizResults() {
   elAge.textContent = answers[0].toUpperCase();
   elSchool.textContent = answers[1].toUpperCase();
   elDegree.textContent = answers[2].toUpperCase();
@@ -104,12 +99,20 @@ function askAllQuestions() {
   elNumber.textContent = answers[5];
   elStates.textContent = answers[6];
   elScore.textContent = quizScore;
+  if (quizScore > 3) {
+    elMessage.textContent = 'Good job!!!';
+  } else {
+    elMessage.textContent = 'Better luck next time!!!';
+  }
 }
 
-if (quizScore > 3) {
-  elMessage.textContent = 'Good job!!!';
-} else {
-  elMessage.textContent = 'Better luck next time!!!';
+function askAllQuestions() {
+  var userName = prompt('Who is taking the quiz today?');
+  confirm(`Welcome, ${userName}`);
+  yesNo();
+  numberGuess();
+  statesQuestion();
+  reportQuizResults();
 }
 
 setTimeout(() => askAllQuestions(), 2000);
